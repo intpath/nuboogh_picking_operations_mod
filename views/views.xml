@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="nuboogh_picking_operations_mod.list">
+      <field name="name">nuboogh_picking_operations_mod list</field>
+      <field name="model">nuboogh_picking_operations_mod.nuboogh_picking_operations_mod</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="nuboogh_picking_operations_mod.action_window">
+      <field name="name">nuboogh_picking_operations_mod window</field>
+      <field name="res_model">nuboogh_picking_operations_mod.nuboogh_picking_operations_mod</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="nuboogh_picking_operations_mod.action_server">
+      <field name="name">nuboogh_picking_operations_mod server</field>
+      <field name="model_id" ref="model_nuboogh_picking_operations_mod_nuboogh_picking_operations_mod"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="nuboogh_picking_operations_mod" id="nuboogh_picking_operations_mod.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="nuboogh_picking_operations_mod.menu_1" parent="nuboogh_picking_operations_mod.menu_root"/>
+    <menuitem name="Menu 2" id="nuboogh_picking_operations_mod.menu_2" parent="nuboogh_picking_operations_mod.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="nuboogh_picking_operations_mod.menu_1_list" parent="nuboogh_picking_operations_mod.menu_1"
+              action="nuboogh_picking_operations_mod.action_window"/>
+    <menuitem name="Server to list" id="nuboogh_picking_operations_mod" parent="nuboogh_picking_operations_mod.menu_2"
+              action="nuboogh_picking_operations_mod.action_server"/>
+-->
+  </data>
+</odoo>

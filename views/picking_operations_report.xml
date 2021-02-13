@@ -1,0 +1,56 @@
+<odoo>
+    <template id="picking_operations_report_mod" inherit_id="stock.report_picking">
+        <xpath expr="//div[@class='page']" position="after">
+        <div class="float-right">
+            <div class=" col-auto" >
+                <strong>المنظم</strong>
+                <p t-field="o.create_uid.name"/>
+            </div>
+
+            <div class="col-auto">
+                <strong>العنوان</strong>
+                <p t-field="o.address"/>
+            </div>
+            
+        </div>
+        <div class="mt-400">
+                <strong>التوقيع</strong>
+        </div>        
+    
+        </xpath>
+
+        <xpath expr="//th[@name='th_barcode']" position="after">
+            <th>
+            <strong>الملاحظات</strong>
+            </th>
+        </xpath>
+
+        <xpath expr="//th[@name='th_product']" position="before">
+            <th>
+            <strong>Seq</strong>
+            </th>
+        </xpath>
+        <!-- <xpath expr="//table[@class='table table-sm']//tbody/t/t" position="inside">
+            <t t-set="i" t-value="1" />
+        </xpath> -->
+
+
+        <xpath expr="//table[@class='table table-sm']//tbody//t//t//td[1]" position="before">
+
+             <td name="seq_i" >
+                <span t-esc="move_index + 1"/> 
+                <!-- <t t-set="i" t-value="i+1"/>  -->
+            </td>
+        </xpath>
+
+
+        <xpath expr="//table[@class='table table-sm']//tbody//t//t//td[6]" position="after">
+
+            <td>
+                <span t-field="ml.notes"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>
+
+

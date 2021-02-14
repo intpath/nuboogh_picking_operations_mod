@@ -7,6 +7,7 @@ class StockPickingExt(models.Model):
     _inherit="stock.picking"
 
     address = fields.Text(string="العنوان")
+    organizer = fields.Char(string="المنظم")
 
 
 

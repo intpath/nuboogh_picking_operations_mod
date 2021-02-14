@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='picking_type_id']" position="after">
                     <field name="address"/>
+                    <field name="organizer"/>
                 </xpath>
                 
 
